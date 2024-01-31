@@ -1,7 +1,4 @@
-public class UserRegistrationImpl extends userRegistered {
-    public UserRegistrationImpl(String login, String password, String confirmPassword) {
-        super(login, password, confirmPassword);
-    }
+public class UserRegistrationImpl {
     public static boolean validateLoginPassword(String login, String password, String confirmPassword) throws WrongLoginException, WrongPasswordException, WrongConfirmPasswordException {
         boolean loginLength = login.length() <= 20 && login.length() >= 5;
         boolean loginMatch = login.matches("[a-zA-Z0-9_]+");

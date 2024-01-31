@@ -1,10 +1,10 @@
 public class Main {
+
     public static void main(String[] args) {
+    }
+    public static void data (String validateLoginPassword) throws WrongConfirmPasswordException, WrongLoginException, WrongPasswordException {
         try {
-            boolean validateLoginPassword = UserRegistrationImpl.validateLoginPassword(userRegistered.getLogin(), userRegistered.getPassword(), userRegistered.getConfirmPassword());
-            if (validateLoginPassword) {
-                System.out.println("Регистрация прошла успешно");
-            }
+            UserRegistrationImpl.validateLoginPassword("any_login", "any_password", "any_password");
         } catch (WrongLoginException e) {
             System.out.println("Логин не верен, регистрация не возможна");
             System.out.println(e.getMessage());
