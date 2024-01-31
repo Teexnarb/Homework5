@@ -1,10 +1,10 @@
 public class Main {
-
     public static void main(String[] args) {
+        data();
     }
-    public static void data (String validateLoginPassword) throws WrongConfirmPasswordException, WrongLoginException, WrongPasswordException {
+    public static void data ()  {
         try {
-            UserRegistrationImpl.validateLoginPassword("any_login", "any_password", "any_password");
+            UserRegistrationImpl.validateLoginPassword("Sky_pro", "any_password", "any_password");
         } catch (WrongLoginException e) {
             System.out.println("Логин не верен, регистрация не возможна");
             System.out.println(e.getMessage());
