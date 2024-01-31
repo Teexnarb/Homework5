@@ -1,5 +1,5 @@
 public class UserRegistrationImpl {
-    public static void validateLoginPassword(String login, String password, String confirmPassword) {
+    public static void validateLoginPassword(String login, String password, String confirmPassword) throws WrongLoginException, WrongPasswordException, WrongConfirmPasswordException {
         boolean loginMatch = login.matches("[a-zA-Z0-9_]+");
         boolean passwordLength = password.length() <= 20 && password.length() >= 5;
         boolean passwordMatch = password.matches("[a-zA-Z0-9_]+");
